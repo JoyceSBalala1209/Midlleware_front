@@ -44,6 +44,7 @@
                     WHOLE VEHICLE
                     </label>
                     <v-select
+                    v-model="form.vehicletype"
                     label="Choose Vehicle Type"
                     class="select d-flex"
                     background-color="#eef5fd"
@@ -64,6 +65,7 @@
                     CARGO TYPE
                     </label>
                     <v-select
+                    v-model="form.cargotype"
                     label="Choose Cargo Type"
                     class="select d-flex"
                     background-color="#eef5fd"
@@ -149,9 +151,8 @@
                 <!-- NEXT AND RESET BUTTON -->
                 <!-- <pre><b-button pill v-b-modal.modal-lg type="submit" variant="warning font-weight-bold">    NEXT    </b-button>    <b-button pill type="reset" variant="warning font-weight-bold">   RESET   </b-button></pre> -->
                 <div class="button">
-                    <b-button pill type="submit" class="btn-custom" @click="routePOST" href="/details" >NEXT</b-button>
+                    <b-button pill type="submit" class="btn-custom" @click="routePOST" href="/details"  >NEXT</b-button>
                     <b-button pill type="reset" class="btn-custom">RESET</b-button>
-                    
                 </div>
                 
                 <!--MODAL
@@ -195,8 +196,8 @@ import AddPackage from './AddPackage.vue';
                 width: "",
                 height: "",
                 weight: "",
-                // cargotype: null,
-                // vehicletype: null,
+                cargotype: '',
+                vehicletype: '',
                 checked: "",
         },
         vehicles: [],

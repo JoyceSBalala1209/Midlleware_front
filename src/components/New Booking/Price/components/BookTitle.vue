@@ -171,6 +171,7 @@
      <a href="/details" class="button show-btn1">Back</a>&nbsp;&nbsp;
     <b-button id=show-btn @click="showModal">Place Order </b-button>
     </center>
+
     <b-modal ref="my-modal" title="YOUR ECONOMY PRICE" hide-footer>
       <div class="d-block">
         <!--PRICE & MOP-->
@@ -320,6 +321,12 @@ export default{
     width:46.5rem;
     border-radius:5rem;  
 }
+
+#inputPrev{
+    width:26.5rem;
+    border-radius:5rem;  
+}
+
 #state{
     width:45rem;
     border-color:white;
